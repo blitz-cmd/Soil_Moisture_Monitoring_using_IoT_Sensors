@@ -21,10 +21,10 @@ const char *password = "wifipassword";
 //------------Static Ip Configaration--------
 char auth[] = "fJe1ydYAFv2NVUsa8HWouIrna6Z4kAE7";
 BlynkTimer timer;
-IPAddress staticIP(192, 168, 0, 221);
-IPAddress gateway(192, 168, 0, 1);
-IPAddress subnet(255, 255, 255, 0);
-IPAddress dns(8, 8, 8, 8);
+//IPAddress staticIP(192, 168 , 0 ,221 );
+//IPAddress gateway(192, 168 , 0 ,1 );
+//IPAddress subnet(255, 255 , 255 , 0 );
+//IPAddress dns( 8 , 8 , 8 ,8 );
 int i = 0;
 //------------------------------------ Create AsyncWebServer object on port 80---------------------------------------------------------
 AsyncWebServer server(80);
@@ -84,7 +84,7 @@ const char index_html[] PROGMEM = R"rawliteral(
 </style>
 </head>
 <body>
-  <h2 style="color:#213346;">A<span style="color:#E84638;font-weight:bold">V</span>OTRIX</h2>
+  <h2 style="color:#213346;">SOIL MOISTURE MONITORING</h2>
    <div id="moisturesensor">
    <span class="sensor_label">Moisture:</span> 
    <span id="SensorValue">%Moisture%</span>
@@ -129,20 +129,20 @@ setInterval(function ( ) {
          document.getElementById("SensorValue").innerHTML = this.responseText;
                //console.log(this.responseText);
   //-------------------Displaying Image and Gif according to the moisture status-------------------------------------
-   if(y<15){
+   if(y<30){
     document.getElementById("plantstatus").src='https://st2.depositphotos.com/1744275/11481/v/950/depositphotos_114816898-stock-illustration-dead-flower-vector-doodle-illustration.jpg';
     
    }
-     else if(y>15 && y<30){
+     else if(y>30 && y<45){
       //document.getElementById("plantstatus").src='https://im6.ezgif.com/tmp/ezgif-6-5198d2b26f85.gif';
       document.getElementById("plantstatus").src='https://www.latestgadget.co/wp-content/uploads/2018/11/pqvxlfws_watering-can.gif';
      }
    
-    else if(y>30){
+    else if(y>50){
       document.getElementById("plantstatus").src='https://cdn.pixabay.com/photo/2013/07/12/19/24/seedling-154735__340.png';
      }
                
-      if(chartT.series[0].data.length > 40) {
+      if(chartT.series[0].data.length > 60) {
         chartT.series[0].addPoint([x, y], true, true, true);
       } else {
         chartT.series[0].addPoint([x, y], true, false, true);
@@ -154,7 +154,7 @@ setInterval(function ( ) {
 }, 3000 ) ;
 </script>
  </html>)rawliteral";
-//------------------------------Splunk page contains the mosture graph and soil temperature-----------------------
+//------------------------------Splunk page contains the moisture graph and soil temperature-----------------------
 //--------------------------------------------------------Splunk Page--------------------------------------------------------
 const char splunk_html[] PROGMEM = R"rawliteral(
 <!DOCTYPE HTML>
@@ -211,7 +211,7 @@ h1{
 </style>
 </head>
 <body>
-  <h2 style="color:#213346;">A<span style="color:#E84638;font-weight:bold">V</span>OTRIX</h2>
+  <h2 style="color:#213346;">BVCOE SOIL MOISTURE MONITORING</h2>
    <div id="sensor">
    <span class="sensor_label">Moisture:</span> 
    <span id="SensorValue">%Moisture%</span>
@@ -520,7 +520,7 @@ void setup(void)
 {
 
     Serial.begin(115200);
-    Blynk.begin(auth, ssid, password, IPAddress(192, 168, 0, 10), 8080);
+    //Blynk.begin(auth, ssid, password,IPAddress(192,168,0,10), 8080);
     if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C))
     { // Address 0x3D for 128x64
         Serial.println(F("SSD1306 allocation failed"));
@@ -528,7 +528,7 @@ void setup(void)
             ;
     }
     //--------------------------------Connecting to Wifi--------------------------------------
-    WiFi.config(staticIP, gateway, subnet, dns);
+    //WiFi.config(staticIP,gateway,subnet,dns);
     WiFi.begin(ssid, password);
     Serial.println("Connecting to WiFi");
     while (WiFi.status() != WL_CONNECTED)
@@ -577,13 +577,14 @@ void loop()
         delay(2000);
         i = 1;
     }
-    Displaypot(); // Displaying pot image on OLED
+
+    Displaylogo(); // Displaying pot image on OLED
     moisture = analogRead(Sensor_pin);
     //Display Analog and percentage moisture on Led
     leddisplay(moisture);
     moisturevalue = ReadMoisture(moisture);
     sensors.requestTemperatures();
     t = sensors.getTempCByIndex(0);
-    Serial.print("Soil Temperature :");
-    Serial.println(t);
+    //Serial.print("Soil Temperature :");
+    //Serial.println(t);
 }
