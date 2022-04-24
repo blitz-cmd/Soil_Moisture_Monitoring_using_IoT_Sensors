@@ -1,1 +1,1 @@
-# NodeMCUESP8266_SoilMoisture_0.96OLED_Arduino_Code
+# Arduino Code for NodeMCU ESP8266, Soil Moisture Sensor and 0.96 OLED Display
