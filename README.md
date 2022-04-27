@@ -2,7 +2,7 @@
 
 # Table of Contents
 1. [Arduino Libraries](#arduino-libraries)
-1. [Libraries Installation Steps](#libraries-installation-steps:)
+1. [Libraries Installation Steps](#libraries-installation-steps)
 1. [Connection](#connection)
 1. [Pictures](#pictures)
 ## Pictures:
@@ -31,6 +31,7 @@ You can install the following libraries by:
 3) Click on Include library
 4) Select Manage libraries
 5) The library manager will open, you can search and install the following libraries.
+6) If you face any error follow the OR part
 ```
 ### OR
 ```
