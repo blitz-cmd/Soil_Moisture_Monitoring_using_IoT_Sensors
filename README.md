@@ -1,6 +1,7 @@
 # Soil Moisture Monitoring using NodeMCU ESP8266, Soil Moisture Sensor, 0.96 OLED Display and Buzzer
 
 # Table of Contents
+1. [Hardware requirements](#hardware-requirements)
 1. [Arduino Libraries](#arduino-libraries)
 1. [Libraries Installation Steps](#libraries-installation-steps)
 1. [Connection](#connection)
@@ -13,6 +14,16 @@
 ### 3) Website Screenshot<br>
 ![Screenshot 2022-04-24 192541](https://user-images.githubusercontent.com/59210571/165560924-317ee24a-dd6a-4ab2-9762-5d9252f9a51b.jpg) <br><br>
 
+## Hardware requirements:
+```
+1) NodeMCU ESP8266
+2) Soil Moisture Sensor
+3) 0.96 OLED Display
+4) Buzzer
+5) BreadBoard
+6) Jumper
+7) USB Cable
+```
 ## Arduino Libraries:
 ```
 1) SSD1306 by Adafruit version 1.2.9
