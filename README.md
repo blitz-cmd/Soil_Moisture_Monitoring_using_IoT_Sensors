@@ -82,3 +82,15 @@ G -> -ve
 11) Copy the IP and paste it into your browser.
 12) Hence, your IoT application is ready to monitor the soil moisture.
 ## Convert Image to Adafruit GFX Bitmap Code:
+1) Go to this [link](http://javl.github.io/image2cpp/).
+2) Select the image from your pc.
+3) Go to the Image Settings:
+```
+a) Canvas size: Keep resolution below 128 * 64.
+```
+4) Go to Output:
+```
+a) Code output format: Select Adafruit GFXbitmapFont.
+```
+5) Click on generate code.
+6) Copy the generated code, paste it in the Arduino Code.
