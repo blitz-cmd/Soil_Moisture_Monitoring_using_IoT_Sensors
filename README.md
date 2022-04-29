@@ -10,11 +10,11 @@
 7. [Images](#images)
 ## Images:
 ### 1) Architecture Diagram<br>
-![Architecture Diagram](https://user-images.githubusercontent.com/59210571/165559785-e16c6ba9-9a4f-4e6c-8cf3-77a3e6e5f8a8.png) <br><br>
+<img src="https://user-images.githubusercontent.com/59210571/165559785-e16c6ba9-9a4f-4e6c-8cf3-77a3e6e5f8a8.png" width="400"> <br><br>
 ### 2) Connection Picture<br>
-![Connection Picture](https://user-images.githubusercontent.com/59210571/165560382-26f7b4d6-885c-4fab-91ba-6fd7f8c3c8ce.jpeg) <br><br>
+<img src="https://user-images.githubusercontent.com/59210571/165560382-26f7b4d6-885c-4fab-91ba-6fd7f8c3c8ce.jpeg" width="400"><br><br>
 ### 3) Website<br>
-![Screenshot 2022-04-24 192541](https://user-images.githubusercontent.com/59210571/165560924-317ee24a-dd6a-4ab2-9762-5d9252f9a51b.jpg) <br><br>
+<img src="https://user-images.githubusercontent.com/59210571/165560924-317ee24a-dd6a-4ab2-9762-5d9252f9a51b.jpg" width="500"> <br><br>
 
 ## Hardware Requirements:
 ```
